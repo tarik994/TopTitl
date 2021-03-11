@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="app">
+
+    <div ng-controller="mainController">
+
+        <header><h2>Best titles</h2> <input class="search" type="search" placeholder="Search" ng-model="search"></header>
+    
+        <main>
+            <ul>
+                <li ng-repeat="hero in heroes | filter: search" ng-click="selectHero(hero)">
+                    <img ng-src="{{hero.img}}" class="imgName">
+                    {{hero.num+1}} {{hero.name}} <div ng-click="deleteHero(hero)"><svg class="trash" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M19 24h-14c-1.104 0-2-.896-2-2v-16h18v16c0 1.104-.896 2-2 2m3-19h-20v-2h6v-1.5c0-.827.673-1.5 1.5-1.5h5c.825 0 1.5.671 1.5 1.5v1.5h6v2zm-12-2h4v-1h-4v1z"/></svg></div><br>
+                </li>
+            </ul>
+        </main>
+        <aside>
+
+            
+          <div class="card" ng-show="selected">
+              <h3>Title: {{selected.name}}</h3>
+              <img class="cardImg" ng-src="{{selected.img}}" alt="">
+              <p>{{selected.description}} <br>
+                  <textarea class="area" cols="30" rows="5" ng-model="comment"></textarea>
+            
+              
+                   
+               
+               <button ng-click="commentFunc(comment, selected)">Komentiraj</button>
+               <ul>
+                   <li class="koment" ng-repeat="kom in selected.komentari">{{kom}} <br></li>
+               </ul> 
+               
+
+             
+          </div>
+            
+         
+
+            
+
+        </aside>
+        
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

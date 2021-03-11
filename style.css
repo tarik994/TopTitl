@@ -1,18 +1,92 @@
-#card{
-    width: 700px;
-    margin: auto;
-    background-color: gray;
-    overflow: hidden;
+
+body{
+    background-color:rgb(221, 219, 219)
 }
 
-#movie{
-    width: 250px;
-    clear: both;
+header{
+    height: 60px;
+    background-color: rgb(48, 78, 214);
+    margin-bottom: 15px;
+}
+
+header h2{
+    float:left;
+    color: white;
+    margin: 15px;
+}
+
+header input{
+    float: right;
+    margin: 10px;
+    width: 200px;
+    background-color:rgb(48, 78, 214);
+    border-bottom: 1px solid white;
+    color: white;
+    height: 40px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    font-size: 1.5em;
+    outline: none;
+}
+::placeholder {
+    color: white;
+    font-size: 1.2em;
+  }
+
+
+  ul li{
+      list-style: none;
+      font-size: 1.5em;
+      margin: 10px;
+      margin-bottom: 15px;
+  }
+
+  .imgName{
+      border-radius: 40%;
+      width: 35px;
+      height: 40px;
+  }
+
+  ul li:hover{
+      opacity: .6;
+      cursor: pointer;
+  }
+
+  main{
+      width:800px;
+      float: left;
+      clear: both;
+      
+  }
+
+
+.card{
+    float: right;
+    width: 700px;
+    border: 1px solid rgb(206, 201, 201);
+    padding: 15px;
+    background-color: whitesmoke;
+    margin-right: 15px;
+    text-align: center;
+    background-color: rgb(202, 201, 197);
    
 }
 
-#main{
-    width: 250%;
+
+
+.trash{
     float: right;
-    
+}
+
+
+.cardImg{
+    width: 300px;
+    height: 300px;
+}
+
+
+
+.area{
+    float: left;
 }
